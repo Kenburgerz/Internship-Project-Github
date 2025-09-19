@@ -2,8 +2,10 @@ body {
   margin: 0;
   background: #2c2c2c;
   font-family: Arial, sans-serif;
+  color: #f1f1f1;
 }
 
+/* Top navigation bar */
 .top-bar {
   width: 100vw;
   height: 70px;
@@ -14,52 +16,107 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .nav-container {
   display: flex;
-  gap: 32px;
-  margin-left: 75px;
+  justify-content: flex-start; /* Align buttons to left */
+  gap: 20px;                   /* Consistent spacing */
+  padding-left: 75px;          /* Same left padding */
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Buttons */
 .nav-btn {
-  width: 120px;
-  height: 48px;
-  background: #88898c;
+  min-width: 140px;            /* Fixed min width for uniformity */
+  padding: 14px 24px;          /* Balanced padding */
+  background: #666769;
   border: none;
-  border-radius: 8px;
-  color: white;
+  border-radius: 12px;
+  color: #f1f1f1;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  user-select: none;
+  text-align: center;          /* Center text */
+  white-space: nowrap;         /* Prevent line breaks */
 }
 
 .nav-btn:hover {
-  background: #aaaaaa;
+  background: #88898c;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
 }
 
+/* Content styling */
 .content {
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 20px;
   color: white;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
 }
 
+/* Grid container */
 .grid-content {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  padding: 0 20px;
 }
 
 .grid-row {
   display: flex;
   gap: 40px;
+  justify-content: center;
 }
 
+/* Grid boxes */
 .grid-box {
   width: 350px;
   height: 240px;
   background: #88898c;
-  border-radius: 10px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.grid-box:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  transform: translateY(-6px);
+}
+
+/* Background image box */
+.grid-box-img {
+  background-image: url('img/51iMlLbzoCL.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Laptop model name overlay */
+.model-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  text-align: center;
+  user-select: none;
 }
