@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Buttons Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="nav-container">
+        <button class="nav-btn" onclick="buttonClicked(1)">Button 1</button>
+        <button class="nav-btn" onclick="buttonClicked(2)">Button 2</button>
+        <button class="nav-btn" onclick="buttonClicked(3)">Button 3</button>
+      </div>
+    </div>
+    <div class="content">
+      <h2>Click a button above!</h2>
+    </div>
+
+    <script>
+      function buttonClicked(num) {
+        alert('Button ' + num + ' clicked!');
+      }
+    </script>
+  </body>
+</html>
