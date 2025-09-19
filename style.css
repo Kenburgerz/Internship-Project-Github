@@ -21,17 +21,17 @@ body {
 
 .nav-container {
   display: flex;
-  justify-content: flex-start; /* Align buttons to left */
-  gap: 20px;                   /* Consistent spacing */
-  padding-left: 75px;          /* Same left padding */
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 75px;
   width: 100%;
   box-sizing: border-box;
 }
 
 /* Buttons */
 .nav-btn {
-  min-width: 140px;            /* Fixed min width for uniformity */
-  padding: 14px 24px;          /* Balanced padding */
+  min-width: 140px;
+  padding: 14px 24px;
   background: #666769;
   border: none;
   border-radius: 12px;
@@ -41,8 +41,8 @@ body {
   transition: background 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 3px 6px rgba(0,0,0,0.3);
   user-select: none;
-  text-align: center;          /* Center text */
-  white-space: nowrap;         /* Prevent line breaks */
+  text-align: center;
+  white-space: nowrap;
 }
 
 .nav-btn:hover {
@@ -122,16 +122,19 @@ body {
 }
 
 /* Responsive styles for phones and small screens */
-
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .nav-container {
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 0;
     gap: 12px;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .nav-btn {
-    width: 100%;
+    width: 90%;
     min-width: unset;
     padding: 12px;
     font-size: 14px;
@@ -140,10 +143,13 @@ body {
   .grid-row {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
 
   .grid-box {
     width: 90vw;
+    max-width: 350px;
     height: 180px;
   }
 }
+
