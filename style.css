@@ -121,35 +121,5 @@ body {
   user-select: none;
 }
 
-/* Responsive styles for phones and small screens */
-@media (max-width: 600px) {
-  .nav-container {
-    flex-direction: column;
-    margin-left: 0;
-    gap: 12px;
-    align-items: center;
-    padding: 0 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
 
-  .nav-btn {
-    width: 90%;
-    min-width: unset;
-    padding: 12px;
-    font-size: 14px;
-  }
-
-  .grid-row {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .grid-box {
-    width: 90vw;
-    max-width: 350px;
-    height: 180px;
-  }
-}
 
